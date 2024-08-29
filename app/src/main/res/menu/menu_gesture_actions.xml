@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item_execute"
+        android:title="@string/execute"/>
+    <item
+        android:id="@+id/item_remove"
+        android:title="@string/remove"/>
+</menu>

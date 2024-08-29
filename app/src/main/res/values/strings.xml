@@ -1,0 +1,299 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Leap Remote</string>
+    <string name="register">Register</string>
+    <string name="login">Login</string>
+    <string name="title_activity_main">Home</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="menu_item_switch">Proxy</string>
+    <string name="menu_item_toggle_global">ON / OFF Overall</string>
+    <string name="menu_item_about">About</string>
+    <string name="menu_item_exit">Exit</string>
+    <string name="config_url">Address Config</string>
+    <string name="config_not_set_value">Not set</string>
+    <string name="config_url_scan">Scan QR code</string>
+    <string name="config_url_manual">Manual input</string>
+    <string name="config_url_scan_hint">Scan QR code of configuration address</string>
+    <string name="select_app">Select the software that uses the agent</string>
+    <string name="select_app_detail">Not selected</string>
+    <string name="proxied_apps">Software using agents</string>
+    <string name="btn_ok">Admit</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_more">More&#8230;</string>
+    <string name="vpn_connected_status">Connected</string>
+    <string name="vpn_disconnected_status">Disconnected</string>
+    <string name="about_info">Shadowsocks android 由dawei开发维护,可以在任意Android 4.0+上使用，无需ROOT权限。它是基于SmartProxy与Shadowsocks-Java改装。</string>
+    <string name="exit_confirm_info">This will disconnect the VPN connection. Are you sure you want to exit?</string>
+    <string name="err_invalid_url">Invalid configuration address</string>
+    <string name="config_url_hint">ss://method:password@host:port</string>
+    <string name="cannot_connect_to_server">Unable to connect to the server</string>
+    <string name="privacy_title">Privacy policy, disclaimer and usage tips</string>
+    <string name="privacy">
+        ◆ Privacy policy\n
+        We will protect your privacy, encrypt data transmission, and not illegally monitor or control your device. Direct mode provides the safest connection without server connection.\n
+        ◆ Disclaimer\n
+        When using this software, please strictly abide by the laws and regulations of your country and region. Do not abuse or infringe upon the privacy of others.\n
+        Our software is only for scientific research, learning, education, and other legitimate purposes.\n
+        The use of this software will be regarded as the approval of all contents of this statement.\n
+        ◆ Usage tips (important)\n
+        This remote control software currently only supports single finger operation and executes gestures after releasing the hand. If you need to press and release it for a long time, please wait for a while. Sometimes network latency can be significant.</string>
+    <string name="downloadUrl">Address for windows version</string>
+    <string name="vipTime">VIP Expire date:</string>
+    <string name="mine">Me</string>
+    <string name="chooseLocation">Choose a node</string>
+    <string name="connect">Connect</string>
+    <string name="currentLocationNoChoice">Node chosen: not chose</string>
+    <string name="agree">Agree</string>
+    <string name="disagree">Disagree</string>
+    <string name="message">Notice</string>
+    <string name="neverShow">Never show again</string>
+    <string name="admit">Admit</string>
+    <string name="pleaseUse">Please Use</string>
+    <string name="pay">Pay</string>
+    <string name="vpn_vip">Email to feedback: mikechenczy@gmail.com.\nTip: after connecting to VPN, you may not be able to connect to the server once when purchasing VIP. Click again.</string>
+    <string name="signInLabel">Daily sign in</string>
+    <string name="main">Home</string>
+    <string name="shareTitle">Share Leap Remote with friends</string>
+    <string name="shareContent">Leap Remote Download Address:</string>
+    <string name="pwd">Password</string>
+    <string name="pwdAgain">Password again</string>
+    <string name="back">Back</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="forgetPassword">Forget Password</string>
+    <string name="autoLogin">Auto Login</string>
+    <string name="error">Error</string>
+    <string name="loggingIn">Logging in</string>
+    <string name="usernameOrPasswordWrongInFormat">Username or password is wrong in format</string>
+    <string name="usernameOrPasswordWrong">Username or password is wrong</string>
+    <string name="downloadingUpdate">Now downloading update</string>
+    <string name="checkingUpdate">Checking for update</string>
+    <string name="user">Username</string>
+    <string name="emailWord">Email</string>
+    <string name="verificationCode">Verification Code</string>
+    <string name="getVerificationCode">Get Verification Code</string>
+    <string name="confirm_register">Confirm Register</string>
+    <string name="backLogin">Back to login</string>
+    <string name="userRegister">Register User</string>
+    <string name="incorrectDataFormat">Incorrect data format</string>
+    <string name="alreadyRegisteredUsername">This username is already registered</string>
+    <string name="alreadyRegisteredEmail">This email is already registered</string>
+    <string name="needVerificationCode">Need verification code</string>
+    <string name="verificationCodeWrong">Verification code is wrong</string>
+    <string name="unableToParseReturnData">Unable to parse return data</string>
+    <string name="verificationCodeWrongInFormat">Verification code is wrong in format</string>
+    <string name="emailWrongInFormat">Email is wrong in format, now we only support common email like gmail</string>
+    <string name="passwordDifferent">Passwords are different</string>
+    <string name="waitCode1">Please wait</string>
+    <string name="waitCode2">seconds then get the verification code again</string>
+    <string name="copySuccess">Copy Success</string>
+    <string name="disconnect">Connected\nTap to discon.</string>
+    <string name="signInSuccess">Sign in successfully</string>
+    <string name="notLoggedIn">Not logged in</string>
+    <string name="alreadySignInTitle">Already sign in, VIP?</string>
+    <string name="alreadySignInContent">You already signed in today, come tomorrow or buy VIP</string>
+    <string name="currentLocation">Node chosen:</string>
+    <string name="addTime1">(</string>
+    <string name="addTime2">)</string>
+    <string name="cantUseThisLocation">This node cannot be connected for the time being. Try another node</string>
+    <string name="vipLocation">VIP Line</string>
+    <string name="vipLocationContent">This is VIP line, buy VIP?</string>
+    <string name="chooseANode">Please choose a node</string>
+    <string name="vipOverTime">VIP expired</string>
+    <string name="vipOverTimeContent">Your VIP expired. You can get VIP by signing in, as well as go buying?</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="vpnDisabled">You have disabled VPN permissions</string>
+    <string name="overTime">expired</string>
+    <string name="versionText">Version: </string>
+    <string name="autoConnect">Connect when boot</string>
+    <string name="buyVIP">VIP Upgrade</string>
+    <string name="share">Share</string>
+    <string name="changePassword">Change Password</string>
+    <string name="logout">Logout</string>
+    <string name="pleasePay">Please pay</string>
+    <string name="pleaseWaitQRCode">Please wait for the QR code to appear</string>
+    <string name="iPaid">I paid</string>
+    <string name="usernameOrEmail">Username or Email</string>
+    <string name="forgetOrChangePassword">Forget/change password</string>
+    <string name="changeSuccess">Change the password successfully</string>
+    <string name="changeSuccessContent">Change the password successfully</string>
+    <string name="userNotExist">The user doesn\'t exist</string>
+    <string name="checkVersion">Check for updates</string>
+    <string name="upToDate">Up to date</string>
+    <string name="newVersion">There\'s a newer version</string>
+    <string name="version">Version</string>
+    <string name="content">Content</string>
+    <string name="toUpdate">Update?</string>
+    <string name="neverShowVersionDialog">Never show again for this version</string>
+    <string name="settings">Settings</string>
+    <string name="chose">Chose</string>
+    <string name="howToUse">How to use?</string>
+    <string name="adSignIn">Ads for extra vip </string>
+    <string name="adSignInVPN">Please connect VPN than get ads</string>
+    <string name="loadAdFailed">Load Ad Failed</string>
+    <string name="rewardedAdFailedToShow">Ad Failed To Show</string>
+    <string name="adSignInGetting">Getting ads</string>
+
+    <string-array name="share_method">
+        <item>QRcode</item>
+        <item>Export to clipboard</item>
+        <item>Export full configuration to clipboard</item>
+    </string-array>
+
+    <string-array name="routing_tag">
+        <item>proxy URL or IP</item>
+        <item>direct URL or IP</item>
+        <item>blocked URL or IP</item>
+    </string-array>
+
+    <string-array name="routing_mode">
+        <item>Global</item>
+        <item>Bypassing the LAN address</item>
+        <item>Bypass mainland address</item>
+        <item>Bypassing LAN and mainland address</item>
+    </string-array>
+    <string name="forceUpdate">Update force, or will exit. </string>
+    <string name="floating">Floating Button</string>
+    <string name="switchConnect">Connect</string>
+    <string name="switchDisconnect">Disconnect</string>
+    <string name="floatingButtonHide">Hid The Floating Button</string>
+    <string name="floatingButtonHideClearly">Floating button was hid after on clicking. Reshow it in settings.</string>
+    <string name="floatDisabled">Float Disabled</string>
+    <string name="floatingMessage">Long click the button to hide it</string>
+    <string name="floating_btn">Floating Button(Long click to close)</string>
+    <string name="adMax">Today advertising limit</string>
+
+    <string-array name="mode_entries">
+        <item>VPN</item>
+        <item>Proxy only</item>
+    </string-array>
+    <string name="vpn_tip">Email to feedback: mikechenczy@gmail.com.\nTg group: https://t.me/leapremote</string>
+    <string name="passChina">Bypass China</string>
+    <string name="welcome_to_register">Welcome to register</string>
+    <string name="welcome_to_login">Welcome to login</string>
+    <string name="copy">Copy</string>
+    <string name="signInNow">Sign In</string>
+    <string name="watch">Watch</string>
+    <string name="alreadySignInContentTest">You already signed in today, come tomorrow</string>
+    <string name="goScoreAndComments">Go</string>
+    <string name="goScoreAndCommentsLong">Go score and comments</string>
+    <string name="goScoreAndCommentsContent">We have made a lot of efforts for this VPN application. Go to score and comment to support us</string>
+    <string name="share_content">Share this VPN with others</string>
+    <string name="buy_vip">Renew</string>
+    <string name="alreadySignInTitleTest">Already sign in today</string>
+    <string name="open">Open</string>
+    <string name="bypass">Bypass mode</string>
+    <string name="bypassApps">Per app proxy</string>
+    <string name="wait_for_loading">Please wait for loading</string>
+    <string name="disco_getReward">Auto discon. to get reward</string>
+    <string name="initializing">Initializing</string>
+    <string name="signInForUse">Sign in for use</string>
+    <string name="new_pwd">New password</string>
+    <string name="new_pwd_again">New password again</string>
+    <string name="confirm">confirm</string>
+    <string name="joinTg">Join Our Telegram Group</string>
+    <string name="join">Join</string>
+    <string name="notice">Notice</string>
+    <string name="ok">OK</string>
+    <string name="add_device">Add devices</string>
+    <string name="enable_remote">Enable remote</string>
+    <string name="actions">Actions</string>
+    <string name="direct_mode">Direct Mode</string>
+    <string name="plain_mode">Plain Mode</string>
+    <string name="offline">Offline</string>
+    <string name="online">Online, enabled</string>
+    <string name="not_enabled">Online, not enabled</string>
+    <string name="unknown">Unknown</string>
+    <string name="leap_remote_is_running">Leap Remote is running</string>
+
+    <plurals name="bytes" translatable="false">
+        <item quantity="one">Byte</item>
+        <item quantity="other">Bytes</item>
+    </plurals>
+
+    <plurals name="removed">
+        <item quantity="one">Removed</item>
+        <item quantity="other">%d items removed</item>
+    </plurals>
+
+    <string-array name="route_entry" ignore="InconsistentArrays">
+        <item>All</item>
+        <item>Bypass LAN</item>
+        <item>Bypass China</item>
+        <item>Bypass LAN &amp; China</item>
+        <item>GFW List</item>
+        <item>China List</item>
+        <item>Customize ACL File</item>
+    </string-array>
+
+    <string name="content_save_bitmap_result">Bitmap保存成功，路径：%1$s</string>
+    <string name="content_media_recorder_result">屏幕录制成功，路径：%1$s</string>
+    <string name="service_start">启动媒体投影服务</string>
+    <string name="service_stop">停止媒体投影服务</string>
+    <string name="cancel">Cancel</string>
+    <string name="no_such_device">No such device</string>
+    <string name="control">Control</string>
+    <string name="remove_device">Remove this device</string>
+    <string name="no_device">No device</string>
+    <string name="enable_the_function">Enable the function</string>
+    <string name="not_supported">Not supported to get status</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="failed_to_connect">Failed to connect</string>
+    <string name="enable_plain_remote">Enable plain remote</string>
+    <string name="enable_direct_remote">Enable direct remote</string>
+    <string name="host_or_port_wrong_format">Host wrong format</string>
+    <string name="not_logged_in">Not logged in</string>
+    <string name="unsharpness">Unsharpness</string>
+    <string name="scale">Scale</string>
+    <string name="no_available_public_ip">No available public ip</string>
+    <string name="failed_to_remote_detect">Failed to remote detect</string>
+    <string name="remote_detecting">Remote detecting</string>
+    <string name="edit">Edit</string>
+    <string name="connect_id">Connect ID</string>
+    <string name="input_connect_id">Please input connect id</string>
+    <string name="failed">Failed</string>
+    <string name="device_existed">Device existed</string>
+    <string name="id_cannot_be_empty">Id cannot be empty</string>
+    <string name="input_connect_pin">Please input connect pin</string>
+    <string name="input_host">Please input host</string>
+    <string name="host_cannot_be_empty">Host cannot be empty</string>
+    <string name="port_cannot_be_empty">Port cannot be empty</string>
+    <string name="port_range_limit">Port must be in range of 1~65535</string>
+    <string name="website_url">http://mjczy.life/leapremote.html</string>
+    <string name="function_not_available">Function is not available</string>
+    <string name="your_connect_id">Your connect ID</string>
+    <string name="your_connect_pin">Your connect Pin</string>
+    <string name="not_got_yet">Not got yet</string>
+    <string name="manual_refresh">Manual refresh</string>
+    <string name="your_ipv4_host">Your ipv4 host</string>
+    <string name="your_ipv6_host">Your ipv6 host (Public)</string>
+    <string name="host">Host</string>
+    <string name="port">Port</string>
+    <string name="connect_pin">Connect Pin</string>
+    <string name="quick_connect">Quick connect</string>
+    <string name="your_devices">Your Devices</string>
+    <string name="accessibility_not_enabled">Accessibility not enabled</string>
+    <string name="the_function_needs_android">"The function needs Android "</string>
+    <string name="quality">Quality</string>
+    <string name="rmnet">Mobile Data</string>
+    <string name="accessibility_service_description">Use accessibility to record or perform gestures</string>
+    <string name="record_gesture">Record Gestures</string>
+    <string name="your_gestures">Your gestures</string>
+    <string name="add_gesture">Add Gesture</string>
+    <string name="no_gestures">No saved gestures</string>
+    <string name="name_cannot_be_empty">Name cannot be empty</string>
+    <string name="input_name">Input name</string>
+    <string name="remove">Remove</string>
+    <string name="execute">Execute</string>
+    <string name="changePin">Change Pin</string>
+    <string name="copy_ip">Copy IP</string>
+    <string name="direct_enabled">Direct Enabled</string>
+</resources>

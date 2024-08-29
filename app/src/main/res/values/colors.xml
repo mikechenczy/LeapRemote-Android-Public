@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#004FEF</color>
+    <color name="colorPrimary_dark">#004FEF</color>
+    <color name="colorPrimary_light">#0080FF</color>
+    <color name="colorPrimaryDark">#004FEF</color>
+    <color name="colorAccent">#00C2FF</color>
+    <color name="accent">#9E9E9E</color>
+    <color name="colorPrimary_text">#212121</color>
+    <color name="secondary_text">#757575</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="colorPing">#185534</color>
+    <color name="colorSubscription">#247BA0</color>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#FF0000</color>
+    <color name="blue">#2D97DD</color>
+    <color name="lightGreen">#00C800</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="darkCyan">#008B8B</color>
+    <color name="darkSlateGray">#2F4F4F</color>
+    <color name="gray">#808080	</color>
+    <color name="material_green_700">#FF4081</color>
+    <color name="material_blue_grey_300">#efb4c8</color>
+    <color name="material_blue_grey_500">#e482a3</color>
+    <color name="material_blue_grey_700">#d9507e</color>
+    <color name="material_accent_300">@color/material_blue_grey_300</color>
+    <color name="material_accent_500">@color/material_blue_grey_500</color>
+    <color name="material_accent_700">@color/material_blue_grey_700</color>
+    <color name="transparent">#00000000</color>
+    <color name="purple">#565DA3</color>
+</resources>

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/available_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:id="@+id/captured_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter"
+            android:visibility="gone"
+            />
+        <TextureView
+            android:id="@+id/record"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:scaleType="fitCenter" />
+    </LinearLayout>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_width="match_parent">
+        <LinearLayout
+            android:id="@+id/buttons_layout"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/back"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="@drawable/button_back" />
+            <Button
+                android:id="@+id/home"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/button_home"/>
+            <Button
+                android:id="@+id/recent"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_recent"/>
+
+            <Button
+                android:id="@+id/volume_up"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/volume_up" />
+            <Button
+                android:id="@+id/volume_down"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/volume_down" />
+            <Button
+                android:id="@+id/volume_mute"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:background="@drawable/volume_mute" />
+
+            <Button
+                android:id="@+id/rotate_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/rotate" />
+
+            <Button
+                android:id="@+id/gestures"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/gestures" />
+            <Button
+                android:id="@+id/hide_buttons_button"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/down" />
+        </LinearLayout>
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:id="@+id/unlock"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/unlock"
+                android:visibility="gone"/>
+            <Button
+                android:id="@+id/lock"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/lock"/>
+            <Button
+                android:id="@+id/fullscreen"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/fullscreen"/>
+            <Button
+                android:id="@+id/show_buttons_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/up" />
+            <LinearLayout
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/quality"/>
+                    <SeekBar
+                        android:id="@+id/qualitySeekBar"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:max="98"
+                        android:progress="60" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/scale"/>
+                    <SeekBar
+                        android:id="@+id/scale"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:min="10"
+                        android:max="100"
+                        android:progress="20" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/unsharpness"/>
+                    <SeekBar
+                        android:id="@+id/quality"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:min="1"
+                        android:max="100"
+                        android:progress="95" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

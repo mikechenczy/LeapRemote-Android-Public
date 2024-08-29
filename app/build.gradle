@@ -1,0 +1,46 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+
+android {
+    compileSdkVersion var.compileSdkVersion
+
+    defaultConfig {
+        applicationId var.applicationId
+        minSdkVersion var.minSdkVersion
+        targetSdkVersion var.targetSdkVersion
+        versionCode var.versionCode
+        versionName var.versionName
+    }
+
+    useLibrary 'org.apache.http.legacy'
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar', '*.aar'])
+    implementation 'com.alibaba:fastjson:1.1.55.android'
+    implementation 'com.ashokvarma.android:bottom-navigation-bar:2.0.0'
+    implementation 'com.leon:lsettingviewlibrary:1.3.0'
+    implementation 'de.hdodenhof:circleimageview:2.1.0'
+    implementation 'com.github.li-xiaojun:XPopup:2.9.19'
+    annotationProcessor 'org.projectlombok:lombok:1.18.2'
+    implementation 'org.projectlombok:lombok:1.18.2'
+    implementation 'dnsjava:dnsjava:2.1.8'
+    implementation 'commons-lang:commons-lang:2.6'
+}
+repositories {
+    mavenCentral()
+}

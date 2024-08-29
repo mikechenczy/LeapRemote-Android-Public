@@ -1,0 +1,50 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.6.10'
+
+    ext {
+        var = [
+                // SDK And Tools
+                applicationId          : "org.mj.leapremote",
+                compileSdkVersion      : 31,
+                minSdkVersion          : 24,
+                targetSdkVersion       : 31,
+                versionCode            : 11,
+                versionName            : "1.1",
+
+                // Dependencies
+                AppCompatVersion       : "1.1.0",
+                ConstraintLayoutVersion: "1.1.3",// 版本库地址：https://dl.google.com/dl/android/maven2/androidx/constraintlayout/group-index.xml https://dl.google.com/dl/android/maven2/com/android/support/constraint/group-index.xml
+
+                // Dependencies Others
+        ]
+    }
+    
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:4.2.2'
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.6.10"
+
+
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven { url 'https://jitpack.io' }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}

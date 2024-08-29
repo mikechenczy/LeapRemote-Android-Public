@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="org.mj.leapremote">
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.DISABLE_KEYGUARD" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <application
+        android:name=".BaseApplication"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true"
+        android:supportsRtl="true">
+        <!--<meta-data
+            android:name="android.max_aspect"
+            android:value="2.4" />-->
+        <meta-data
+            android:name="android.max_aspect"
+            android:value="ratio_float" />
+        <!--适配华为（huawei）刘海屏-->
+        <meta-data
+            android:name="android.notch_support"
+            android:value="true"/>
+        <!--适配小米（xiaomi）刘海屏-->
+        <meta-data
+            android:name="notch.config"
+            android:value="portrait|landscape" />
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <activity android:name=".ui.activities.LogoActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.activities.MainActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ui.activities.GesturesActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name=".ui.activities.ControlActivity"
+            android:exported="true">
+        </activity>
+        <receiver android:name=".receiver.IntentReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE"
+                    tools:ignore="BatteryLife" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name=".service.AutoService"
+            android:exported="false"
+            android:label="LeapRemote远程控制"
+            android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE" >
+            <intent-filter>
+                <action android:name="android.accessibilityservice.AccessibilityService" />
+            </intent-filter>
+            <!-- 配置服务服务配置文件路径 -->
+            <meta-data
+                android:name="android.accessibilityservice"
+                android:resource="@xml/accessibility_config" />
+        </service>
+        <service
+            android:name=".service.FloatingView"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.ServerService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.ClientService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name=".service.ForeService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.mask.mediaprojection.service.MediaProjectionService"
+            android:foregroundServiceType="mediaProjection" />
+    </application>
+
+</manifest>

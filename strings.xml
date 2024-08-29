@@ -1,0 +1,53 @@
+<resources>
+
+    <string name="app_name">LeapRemote</string>
+
+    <string name="title_view_root">ViewRoot</string>
+    <string name="title_view_group_1">ViewGroup_1</string>
+    <string name="title_view_group_2">ViewGroup_2</string>
+    <string name="title_view_group_3">ViewGroup_3</string>
+
+    <string name="content_save_bitmap_result">Bitmap保存成功，路径：%1$s</string>
+    <string name="content_media_recorder_result">屏幕录制成功，路径：%1$s</string>
+
+    <string name="service_start">启动媒体投影服务</string>
+    <string name="service_stop">停止媒体投影服务</string>
+
+    <string name="screen_capture">屏幕截图</string>
+
+    <string name="media_recorder_start">开始屏幕录制</string>
+    <string name="media_recorder_stop">停止屏幕录制</string>
+    <string name="description_in_xml">desc</string>
+    <string name="description">desc</string>
+    <string name="enable_remote">Enable Remote Control</string>
+    <string name="share">Share</string>
+    <string name="change_password">Change Password</string>
+    <string name="check_version">Check Version</string>
+    <string name="logout">Logout</string>
+    <string name="tip">This is a tip. (Noting for the time being)</string>
+    <string name="leap_remote_is_running">飞跃云控正在运行</string>
+    <string name="cannot_connect_to_server">Cannot connect to server</string>
+    <string name="never_show">Never show</string>
+    <string name="ok">OK</string>
+    <string name="notice">Notice</string>
+    <string name="yes">Yes</string>
+    <string name="newVersion">There\'s a new version</string>
+    <string name="version">version</string>
+    <string name="downloadingUpdate">Now downloading update</string>
+    <string name="cancel">cancel</string>
+    <string name="no">No</string>
+    <string name="never_show_version_dialog">Never show again for this version</string>
+    <string name="initializing">Initializing</string>
+    <string name="content">Content</string>
+    <string name="force_update">Update forcely. Quit if you cancel</string>
+    <string name="to_update">Update?</string>
+    <string name="add_device">Add device</string>
+    <string name="actions">Actions</string>
+    <string name="direct_mode">Direct mode</string>
+    <string name="manual_mode">Manual Mode</string>
+    <string name="unknown">Unknown</string>
+    <string name="not_enabled">Not enabled</string>
+    <string name="online">Online</string>
+    <string name="offline">Offline</string>
+
+</resources>
