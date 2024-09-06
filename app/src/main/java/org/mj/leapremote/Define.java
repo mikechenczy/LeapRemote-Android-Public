@@ -51,7 +51,7 @@ public class Define {
     public static String autoLoginUsername;
     public static String autoLoginPassword;
     public static boolean isExamining;
-    public static String deviceId = Utils.getUniquePsuedoID();
+    public static String deviceId;
     public static int defaultPort = 11451;
     public static String temporaryId;
     public static String temporaryPin;
@@ -75,8 +75,9 @@ public class Define {
         server = serverInfo.getString("ipv4");
         url = serverInfo.getString("ipv4Url");
         host = serverInfo.getString("host");
-        getIp();
         DataUtil.load();
+        DataUtil.save();//In order to first save generated DEVICE ID
+        getIp();
     }
 
     public static void getIp() {
@@ -90,16 +91,16 @@ public class Define {
             server = serverInfo.getString("ipv4-new");
             url = serverInfo.getString("ipv4Url-new");
             host = serverInfo.getString("host");
-            System.out.println(!Define.ipv6Support && Utils.stringIsNull(host));
+            System.out.println(!Define.ipv6Support && Utils.stringIsEmpty(host));
             System.out.println("HOST: "+host);
             ipGot = true;
             return;
         }
         new Thread(() -> {
             ipGot = false;
-            ipv6Support = ServerUtil.ipv6Test();
             try {
                 serverInfo = ServerUtil.getAddress().getJSONObject("leapremote");
+                ipv6Support = ServerUtil.ipv6Test();
                 System.out.println(serverInfo);
                 server = ipv6Support ? serverInfo.getString("ipv6-new") : serverInfo.getString("ipv4-new");
                 url = ipv6Support ? serverInfo.getString("ipv6Url-new") : serverInfo.getString("ipv4Url-new");
@@ -142,9 +143,9 @@ public class Define {
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }
-                ipv6Support = ServerUtil.ipv6Test();
                 try {
                     serverInfo = ServerUtil.getAddress().getJSONObject("leapremote");
+                    ipv6Support = ServerUtil.ipv6Test();
                     server = ipv6Support ? serverInfo.getString("ipv6-new") : serverInfo.getString("ipv4-new");
                     url = ipv6Support ? serverInfo.getString("ipv6Url-new") : serverInfo.getString("ipv4Url-new");
                     host = serverInfo.getString("host");

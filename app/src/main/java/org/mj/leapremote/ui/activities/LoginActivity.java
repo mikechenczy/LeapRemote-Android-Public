@@ -55,9 +55,9 @@ public class LoginActivity extends AppCompatActivity {
             Intent intent = new Intent(LoginActivity.this, ForgetPasswordActivity.class);
             startActivity(intent);
         });
-        if(!Utils.stringIsNull(Define.autoLoginUsername))
+        if(!Utils.stringIsEmpty(Define.autoLoginUsername))
             usernameText.setText(Define.autoLoginUsername);
-        if(!Utils.stringIsNull(Define.autoLoginUsername) && Define.autoLogin)
+        if(!Utils.stringIsEmpty(Define.autoLoginUsername) && Define.autoLogin)
             passwordText.setText(Define.autoLoginPassword);
     }
 
@@ -74,7 +74,7 @@ public class LoginActivity extends AppCompatActivity {
                     User user = HttpService.login(username, password);
                     if (user == null)
                         LoginActivity.this.runOnUiThread(() -> showErrorMessage(getResources().getText(R.string.cannot_connect_to_server).toString()));
-                    else if (Utils.stringIsNull(user.getUsername()))
+                    else if (Utils.stringIsEmpty(user.getUsername()))
                         LoginActivity.this.runOnUiThread(() -> showErrorMessage(getString(user.getUserId() == 1?R.string.usernameOrPasswordWrongInFormat:R.string.usernameOrPasswordWrong)));
                     else {
                         Define.user = user;

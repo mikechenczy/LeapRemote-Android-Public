@@ -221,7 +221,7 @@
     <string name="host_cannot_be_empty">主机不能为空</string>
     <string name="port_cannot_be_empty">端口不能为空</string>
     <string name="port_range_limit">端口只能为1~65535</string>
-    <string name="website_url">http://mjczy.life/leapremote.html</string>
+    <string name="website_url">http://mjczy.top/leapremote.html</string>
     <string name="function_not_available">功能暂未开发</string>
     <string name="your_connect_id">你的连接id</string>
     <string name="your_connect_pin">你的连接密码</string>

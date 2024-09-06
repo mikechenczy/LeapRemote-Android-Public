@@ -267,7 +267,7 @@
     <string name="host_cannot_be_empty">Host cannot be empty</string>
     <string name="port_cannot_be_empty">Port cannot be empty</string>
     <string name="port_range_limit">Port must be in range of 1~65535</string>
-    <string name="website_url">http://mjczy.life/leapremote.html</string>
+    <string name="website_url">http://mjczy.top/leapremote.html</string>
     <string name="function_not_available">Function is not available</string>
     <string name="your_connect_id">Your connect ID</string>
     <string name="your_connect_pin">Your connect Pin</string>

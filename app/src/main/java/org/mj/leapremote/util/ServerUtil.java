@@ -116,19 +116,19 @@ public class ServerUtil {
 
     public static void refreshIpv4AndIpv6() {
         new Thread(() -> {
-            if(ServerUtil.checkNetwork()) {
+            //if (ServerUtil.checkNetwork()) {
                 boolean ipv6Support = ServerUtil.ipv6Test();
                 if(Define.ipv6Support==ipv6Support)
                     return;
                 Define.ipv6Support = ipv6Support;
                 Define.server = Define.serverInfo.getString(Define.ipv6Support ? "ipv6-new" : "ipv4-new");
                 Define.url = Define.serverInfo.getString(Define.ipv6Support ? "ipv6Url-new" : "ipv4Url-new");
-            }
+            //}
         }).start();
     }
     public static void refreshWebSocketIpv4AndIpv6(Activity activity) {
         new Thread(() -> {
-            if(ServerUtil.checkNetwork()) {
+            //if (ServerUtil.checkNetwork()) {
                 boolean ipv6Support = ServerUtil.ipv6Test();
                 if(Define.ipv6Support==ipv6Support)
                     return;
@@ -136,7 +136,7 @@ public class ServerUtil {
                 Define.server = Define.serverInfo.getString(Define.ipv6Support ? "ipv6-new" : "ipv4-new");
                 Define.url = Define.serverInfo.getString(Define.ipv6Support ? "ipv6Url-new" : "ipv4Url-new");
                 activity.runOnUiThread(() -> ClientHelper.reconnect(activity));
-            }
+            //}
         }).start();
     }
 

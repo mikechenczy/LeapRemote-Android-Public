@@ -5,7 +5,9 @@ import com.alibaba.fastjson.JSONArray;
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.TypeReference;
 
+import org.apache.http.client.methods.HttpPost;
 import org.apache.http.conn.ssl.SSLSocketFactory;
+import org.apache.http.entity.StringEntity;
 import org.mj.leapremote.Define;
 import org.mj.leapremote.model.Device;
 import org.mj.leapremote.model.User;
@@ -60,21 +62,33 @@ public class HttpService {
     }
 
     public static String httpGet(String url) throws IOException {
-        System.out.println(url);
-        try {
-            HttpGet httpGet = new HttpGet(url);
-            if(!Define.ipv6Support && !Utils.stringIsNull(Define.host))
-                httpGet.setHeader("Host", Define.host);
-            HttpResponse res = httpClient.execute(httpGet);
-            return EntityUtils.toString(res.getEntity(), "utf-8");
-        } catch (Exception e) {
-            e.printStackTrace();
-            throw new IOException("Http Get Failed: "+url);
-        }
+        HttpGet httpGet = new HttpGet(url);
+        if(!Define.ipv6Support && !Utils.stringIsEmpty(Define.host))
+            httpGet.setHeader("Host", Define.host);
+        HttpResponse res = httpClient.execute(httpGet);
+        return EntityUtils.toString(res.getEntity(), "utf-8");
+    }
+
+    public static String httpPost(String url, String entity) throws IOException {
+        HttpPost httpPost = new HttpPost(url);
+        httpPost.setEntity(new StringEntity(entity));
+        if(!Define.ipv6Support && !Utils.stringIsEmpty(Define.host))
+            httpPost.setHeader("Host", Define.host);
+        HttpResponse res = httpClient.execute(httpPost);
+        return EntityUtils.toString(res.getEntity(), "utf-8");
     }
 
     public static JSONObject httpGetJSON(String url) throws IOException {
         String content = httpGet(url);
+        try {
+            return JSONObject.parseObject(content);
+        } catch (Exception e){
+            throw new IOException("JSON Parsing Error: "+content);
+        }
+    }
+
+    public static JSONObject httpPostJSON(String url, String entity) throws IOException {
+        String content = httpPost(url, entity);
         try {
             return JSONObject.parseObject(content);
         } catch (Exception e){
@@ -226,11 +240,11 @@ public class HttpService {
         return null;
     }
 
-    public static JSONObject publicIp(JSONArray hosts) {
+    public static String publicIp(JSONArray hosts) {
         refreshIpv4AndIpv6();
-        String url = Define.server + "core/publicIp?deviceId="+Define.deviceId+"&hosts="+ URLEncoder.encode(hosts.toString());
+        String url = Define.server + "core/publicIp?deviceId="+Define.deviceId;
         try {
-            return httpGetJSON(url);
+            return httpPost(url, hosts.toString());
         } catch (Exception e) {
             e.printStackTrace();
         }

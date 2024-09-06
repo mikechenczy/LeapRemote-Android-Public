@@ -30,6 +30,7 @@ public class DataUtil {
         editor.putString("directDevices", DevicesUtil.getDirectDevicesJSONString());
         editor.putString("savedGestures", Define.savedGestures);
         editor.putBoolean("isSoftwareActivated", Define.isSoftwareActivated);
+        editor.putString("deviceId", Define.deviceId);
         editor.apply();
     }
 
@@ -42,6 +43,7 @@ public class DataUtil {
         Define.neverShowVersionDialog = sharedPreferences.getString("neverShowVersionDialog", null);
         Define.savedGestures = sharedPreferences.getString("savedGestures", "[]");
         Define.isSoftwareActivated = sharedPreferences.getBoolean("isSoftwareActivated", false);
+        Define.deviceId = sharedPreferences.getString("deviceId", Utils.getUniquePsuedoID());
         DevicesUtil.setDirectDevicesJSONString(sharedPreferences.getString("directDevices", null));
     }
 }

@@ -44,6 +44,9 @@ public class MineFragment extends Fragment {
     public LSettingItem login;
     public LSettingItem share;
     public LSettingItem checkVersion;
+
+    public ProgressDialog progressDialog;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
@@ -108,7 +111,7 @@ public class MineFragment extends Fragment {
                     } else {
                         new AlertDialog.Builder(MainActivity.INSTANCE).setTitle(R.string.newVersion).setMessage(getString(R.string.version)+":" + s.getString("version") + "\n"+getString(R.string.content)+":" + s.getString("description") + "\n"+(s.getBoolean("force")?getString(R.string.forceUpdate):"")+getString(R.string.toUpdate))
                                 .setPositiveButton(R.string.yes, (dialog, which) -> {
-                                    ProgressDialog progressDialog = new ProgressDialog(MainActivity.INSTANCE);
+                                    progressDialog = new ProgressDialog(MainActivity.INSTANCE);
                                     progressDialog.setTitle(R.string.downloadingUpdate);
                                     //设置水平进度条
                                     progressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);

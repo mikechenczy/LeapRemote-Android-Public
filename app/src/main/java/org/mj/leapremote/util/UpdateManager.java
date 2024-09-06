@@ -12,6 +12,7 @@ import androidx.core.content.FileProvider;
 import org.mj.leapremote.Define;
 import org.mj.leapremote.ui.activities.LogoActivity;
 import org.mj.leapremote.ui.activities.MainActivity;
+import org.mj.leapremote.ui.fragments.MineFragment;
 
 import java.io.File;
 import java.io.FileOutputStream;
@@ -56,6 +57,10 @@ public class UpdateManager
                         ((SettingsActivity) mContext).progressDialog.setProgress(progress);
                     else
                         ((RoomsActivity) mContext).progressDialog.setProgress(progress);*/
+                    if(mContext instanceof LogoActivity)
+                        ((LogoActivity) mContext).progressDialog.setProgress(progress);
+                    else if(mContext instanceof MainActivity)
+                        ((MineFragment) mContext).progressDialog.setProgress(progress);
                     break;
                 case DOWNLOAD_FINISH:
                     // 安装文件
@@ -101,7 +106,7 @@ public class UpdateManager
                     URL url = new URL(Define.server +"leapremote.apk");
                     // 创建连接
                     HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-                    if(!Define.ipv6Support && !Utils.stringIsNull(Define.host))
+                    if(!Define.ipv6Support && !Utils.stringIsEmpty(Define.host))
                         conn.setRequestProperty("Host", Define.host);
                     conn.connect();
                     // 获取文件大小
@@ -159,7 +164,7 @@ public class UpdateManager
         Intent intent = new Intent(Intent.ACTION_VIEW);
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
             intent.setFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION);
-            Uri contentUri = FileProvider.getUriForFile((mContext instanceof LogoActivity?(LogoActivity) mContext:MainActivity.INSTANCE), "org.mj.leapremote.fileprovider", new File(filePath));
+            Uri contentUri = FileProvider.getUriForFile((mContext instanceof LogoActivity?(LogoActivity) mContext:MainActivity.INSTANCE), (mContext instanceof LogoActivity?(LogoActivity) mContext:MainActivity.INSTANCE).getPackageName()+".fileprovider", new File(filePath));
             intent.setDataAndType(contentUri, "application/vnd.android.package-archive");
         } else {
             intent.setDataAndType(Uri.fromFile(new File(filePath)), "application/vnd.android.package-archive");

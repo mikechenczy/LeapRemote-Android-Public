@@ -11,7 +11,6 @@ import java.util.List;
 
 public class GetTextRecord {
     public static void main(String[] args) {
-        //System.out.println(JSON.parseObject(AesUtil.decrypt(getATxt("socket.mjczy.top"))));
     }
 
     public static String getATxt(String domain) {

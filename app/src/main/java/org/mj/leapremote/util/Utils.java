@@ -33,13 +33,10 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.text.DecimalFormat;
 import java.util.Arrays;
+import java.util.Random;
 import java.util.UUID;
 
 public class Utils {
-    public static boolean stringIsNull(String s) {
-        return s==null || s.isEmpty();
-    }
-
     public static boolean stringIsEmpty(String s) {
         return s==null || s.replaceAll(" ", "").replaceAll("\r", "").replaceAll("\n", "").isEmpty();
     }
@@ -336,7 +333,7 @@ public class Utils {
 
     public static String getUniquePsuedoID() {
         String serial;
-        String m_szDevIDShort = "35" + Build.BOARD.length() % 10 + Build.BRAND.length() % 10 + Build.CPU_ABI.length() % 10 + Build.DEVICE.length() % 10 + Build.DISPLAY.length() % 10 + Build.HOST.length() % 10 + Build.ID.length() % 10 + Build.MANUFACTURER.length() % 10 + Build.MODEL.length() % 10 + Build.PRODUCT.length() % 10 + Build.TAGS.length() % 10 + Build.TYPE.length() % 10 + Build.USER.length() % 10;
+        String m_szDevIDShort = Build.BOARD+Build.BRAND+Build.CPU_ABI+Build.DEVICE+Build.DISPLAY+Build.HOST+Build.ID+Build.MANUFACTURER+Build.MODEL+Build.PRODUCT+Build.TAGS+Build.TYPE+Build.USER + new Random().nextInt(90000)+10000;
         //13 位
         try { serial = android.os.Build.class.getField("SERIAL").get(null).toString();
             // API>=9 使用serial号

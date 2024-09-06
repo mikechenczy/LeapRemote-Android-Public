@@ -194,7 +194,7 @@ public class QuickConnectFragment extends Fragment {
 
     private void updatePublicIp(JSONArray availableHosts) {
         new Thread(() -> {
-            if(HttpService.publicIp(availableHosts)==null) {
+            if (HttpService.publicIp(availableHosts)==null) {
                 getActivity().runOnUiThread(() -> Toast.makeText(getActivity(), R.string.cannot_connect_to_server, Toast.LENGTH_SHORT).show());
             }
         }).start();
